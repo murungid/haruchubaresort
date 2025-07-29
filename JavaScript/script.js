@@ -63,3 +63,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Back to top button with improved behavior
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    
+    // Show button after scrolling 1 screen height
+    if (scrollPosition > windowHeight) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+    
+    // Add/remove shadow based on scroll position
+    const navbar = document.querySelector('.navbar');
+    if (scrollPosition > 10) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+
+backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});

@@ -1,0 +1,46 @@
+/* Navbar fixes */
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-light-green {
+    background-color: #f8f9fa; /* Light green background */
+}
+
+/* Fix dropdown menu alignment */
+.dropdown-menu {
+    margin-top: 0.5rem !important;
+}
+
+/* Navbar link hover effects */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #198754;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Fix sticky navbar z-index */
+.sticky-top {
+    z-index: 1020;
+}

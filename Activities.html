@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Experiences | Orucuba gardens</title>
+    <meta name="description" content="Discover exciting activities and experiences at Orucuba gardens. From jungle adventures to relaxing at our famous Jungle Bar, we offer something for everyone.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2a5d45">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light-green sticky-top py-2 py-lg-3">
+        <div class="container px-3 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+                <i class="fas fa-tree me-2 text-success"></i>
+                <span class="fw-bold">Orucuba</span>
+                <span class="d-none d-sm-inline ms-1">gardens</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium" href="#" id="diningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dining
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="diningDropdown">
+                            <li><a class="dropdown-item" href="restaurant.html">The Canopy Restaurant</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark fw-medium" href="activities.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-medium" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-success mt-2 mt-lg-0 px-3 py-2" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="activities-hero position-relative overflow-hidden">
+        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1468413253725-0d5181091126?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+            <div class="hero-overlay d-flex align-items-center">
+                <div class="container text-white text-center position-relative" data-aos="fade-up" data-aos-duration="800">
+                    <h1 class="display-3 fw-bold mb-4">Activities & Experiences</h1>
+                    <p class="lead fs-4 mb-5">Discover unforgettable adventures in the heart of nature</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <a href="#activities" class="btn btn-success btn-lg px-4 py-3">Explore Activities</a>
+                        <a href="#bar" class="btn btn-outline-light btn-lg px-4 py-3">Visit Our Bar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-5 py-lg-7">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Adventure Awaits</span>
+                <h2 class="display-5 fw-bold mb-4">Nature Experiences</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">From guided jungle treks to bird watching, immerse yourself in the beauty of our natural surroundings.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Jungle Trekking" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Guided Jungle Treks</h3>
+                            <p class="card-text">Explore the lush rainforest with our expert guides who will show you hidden waterfalls, exotic wildlife, and ancient trees.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Daily at 7am & 2pm</li>
+                                <li class="mb-2"><i class="fas fa-hourglass-half text-success me-2"></i> 2-4 hours</li>
+                                <li class="mb-2"><i class="fas fa-user-friends text-success me-2"></i> Small groups (max 8)</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Bird Watching" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Bird Watching Tours</h3>
+                            <p class="card-text">Discover over 200 species of tropical birds with our ornithologist guide. Perfect for nature lovers and photographers.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Sunrise & sunset tours</li>
+                                <li class="mb-2"><i class="fas fa-binoculars text-success me-2"></i> Equipment provided</li>
+                                <li class="mb-2"><i class="fas fa-camera text-success me-2"></i> Photography tips included</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Yoga Classes" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Sunrise Yoga</h3>
+                            <p class="card-text">Begin your day with rejuvenating yoga sessions overlooking the jungle canopy. Suitable for all skill levels.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-sun text-success me-2"></i> Daily at 6:30am</li>
+                                <li class="mb-2"><i class="fas fa-spa text-success me-2"></i> Mats & props provided</li>
+                                <li class="mb-2"><i class="fas fa-leaf text-success me-2"></i> Outdoor jungle platform</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Waterfall Visit" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Waterfall Excursion</h3>
+                            <p class="card-text">Hike to stunning hidden waterfalls where you can swim in crystal-clear natural pools surrounded by lush vegetation.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-water text-success me-2"></i> Multiple waterfalls</li>
+                                <li class="mb-2"><i class="fas fa-umbrella-beach text-success me-2"></i> Swimming spots</li>
+                                <li class="mb-2"><i class="fas fa-camera text-success me-2"></i> Photo opportunities</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Cultural Tour" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Cultural Village Tour</h3>
+                            <p class="card-text">Visit nearby villages to learn about local traditions, crafts, and daily life from community members.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-hands-helping text-success me-2"></i> Community-based</li>
+                                <li class="mb-2"><i class="fas fa-utensils text-success me-2"></i> Traditional meal included</li>
+                                <li class="mb-2"><i class="fas fa-store text-success me-2"></i> Local artisan visits</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1518632618336-2daf285f0e6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Night Walk" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Night Nature Walk</h3>
+                            <p class="card-text">Discover the jungle after dark with our expert guides. Spot nocturnal wildlife and experience the forest's nighttime sounds.</p>
+                            <ul class="list-unstyled mb-3">
+                                <li class="mb-2"><i class="fas fa-moon text-success me-2"></i> Starts at 7:30pm</li>
+                                <li class="mb-2"><i class="fas fa-lightbulb text-success me-2"></i> Special flashlights provided</li>
+                                <li class="mb-2"><i class="fas fa-user-shield text-success me-2"></i> Expert safety guides</li>
+                            </ul>
+                            <a href="#contact" class="btn btn-outline-success w-100">Book This Activity</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jungle Bar Section -->
+    <section id="bar" class="py-5 py-lg-7 bg-light-green">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Jungle Bar" loading="lazy">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark-gradient text-white">
+                            <h3 class="h4 mb-1">Jungle Bar</h3>
+                            <p class="mb-0 small">Crafted cocktails by the infinity pool</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="display-5 fw-bold mb-4">The Jungle Bar Experience</h2>
+                    <p class="lead mb-4">Our jungle-inspired bar is the perfect place to unwind after a day of adventure, featuring signature cocktails made with local spirits, fresh fruits, and herbs from our gardens.</p>
+                    
+                    <div class="mb-4">
+                        <h3 class="h4 fw-bold mb-3">Signature Cocktails</h3>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 text-success me-3">
+                                        <i class="fas fa-cocktail fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Jungle Sunset</h4>
+                                        <p class="small mb-0">Local rum, passionfruit, lime, and a hint of chili</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 text-success me-3">
+                                        <i class="fas fa-cocktail fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Canopy Cooler</h4>
+                                        <p class="small mb-0">Gin, cucumber, mint, and lemongrass</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 text-success me-3">
+                                        <i class="fas fa-cocktail fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Tropical Mule</h4>
+                                        <p class="small mb-0">Vodka, ginger beer, pineapple, and lime</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 text-success me-3">
+                                        <i class="fas fa-cocktail fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Orucuba Old Fashioned</h4>
+                                        <p class="small mb-0">Local whiskey, jungle spices, and orange</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h3 class="h4 fw-bold mb-3">Bar Features</h3>
+                        <ul class="list-unstyled row g-3">
+                            <li class="col-md-6 d-flex">
+                                <i class="fas fa-clock text-success me-2 mt-1"></i>
+                                <span>Daily: 12pm-11pm</span>
+                            </li>
+                            <li class="col-md-6 d-flex">
+                                <i class="fas fa-music text-success me-2 mt-1"></i>
+                                <span>Live music Fridays & Saturdays</span>
+                            </li>
+                            <li class="col-md-6 d-flex">
+                                <i class="fas fa-umbrella-beach text-success me-2 mt-1"></i>
+                                <span>Infinity poolside seating</span>
+                            </li>
+                            <li class="col-md-6 d-flex">
+                                <i class="fas fa-sun text-success me-2 mt-1"></i>
+                                <span>Spectacular sunset views</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="events">
+                        <h3 class="h4 fw-bold mb-3">Upcoming Events</h3>
+                        <div class="card border-0 shadow-sm mb-3">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 bg-success text-white text-center p-2 rounded me-3" style="width: 60px;">
+                                        <div class="fw-bold">FRI</div>
+                                        <div class="fs-5">12</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Jungle Jazz Night</h4>
+                                        <p class="small mb-1">7:00 PM - 10:00 PM</p>
+                                        <p class="small mb-0">Live jazz performance by local artists</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 bg-success text-white text-center p-2 rounded me-3" style="width: 60px;">
+                                        <div class="fw-bold">SAT</div>
+                                        <div class="fs-5">20</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="h6 fw-bold mb-1">Mixology Workshop</h4>
+                                        <p class="small mb-1">4:00 PM - 6:00 PM</p>
+                                        <p class="small mb-0">Learn to make our signature cocktails</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 py-lg-7 bg-success text-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-white-50 fw-bold text-uppercase small">Guest Experiences</span>
+                <h2 class="display-5 fw-bold mb-4">What Adventurers Say</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The jungle trek was absolutely breathtaking! Our guide knew all the best spots and we saw monkeys, toucans, and even a sloth!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50" height="50" alt="Emma R." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Emma R.</h6>
+                                    <small class="text-white-50">Toronto, Canada</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The Jungle Bar makes the best cocktails I've ever had. The sunset views from there are worth the trip alone!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" height="50" alt="James L." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">James L.</h6>
+                                    <small class="text-white-50">Sydney, Australia</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text mb-4">"The cultural village tour was so authentic and meaningful. We learned so much and the local crafts were beautiful."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Priya K." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Priya K.</h6>
+                                    <small class="text-white-50">Mumbai, India</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 py-lg-7 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-4">Book Your Adventure</h2>
+                    <p class="lead mx-auto" style="max-width: 700px;">Ready to experience these activities? Contact our concierge to arrange your perfect itinerary.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-phone-alt fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-3">Call Us</h3>
+                            <p class="card-text mb-4">Speak directly with our activities coordinator to plan your adventures.</p>
+                            <a href="tel:+256780834586" class="btn btn-success">+256 780 834 586</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-envelope fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-3">Email Us</h3>
+                            <p class="card-text mb-4">Send us your questions or requests and we'll respond promptly.</p>
+                            <a href="mailto:activities@orucuba.com" class="btn btn-success">activities@orucuba.com</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="bg-success bg-opacity-10 text-success p-3 rounded-circle d-inline-flex mb-4">
+                                <i class="fas fa-concierge-bell fa-2x"></i>
+                            </div>
+                            <h3 class="h5 card-title mb-3">Concierge Desk</h3>
+                            <p class="card-text mb-4">Visit our concierge in the lobby to book activities during your stay.</p>
+                            <a href="contact.html" class="btn btn-success">Visit Concierge</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand d-flex align-items-center mb-4">
+                        <i class="fas fa-tree fa-2x text-success me-3"></i>
+                        <div>
+                            <h2 class="h4 mb-0 fw-bold">orucuba</h2>
+                            <p class="mb-0 small text-muted">Eco gardens & Spa</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-muted">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    
+                    <div class="social-icons mb-4">
+                        <a href="#" class="text-white me-3" aria-label="Facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="TripAdvisor" data-bs-toggle="tooltip" data-bs-placement="top" title="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Explore</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="rooms.html" class="nav-link p-0 text-muted">Rooms</a></li>
+                        <li class="nav-item mb-2"><a href="restaurant.html" class="nav-link p-0 text-muted">Dining</a></li>
+                        <li class="nav-item mb-2"><a href="activities.html" class="nav-link p-0 text-muted">Activities</a></li>
+                        <li class="nav-item mb-2"><a href="spa.html" class="nav-link p-0 text-muted">Wellness</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Information</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="booking.html" class="nav-link p-0 text-muted">Booking</a></li>
+                        <li class="nav-item mb-2"><a href="gallery.html" class="nav-link p-0 text-muted">Gallery</a></li>
+                        <li class="nav-item mb-2"><a href="offers.html" class="nav-link p-0 text-muted">Special Offers</a></li>
+                        <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Contact</h5>
+                    <address class="mb-3 text-muted">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> FORT-KAMWENGE ROAD, KM 2</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i> +256 780 834 586</p>
+                        <p class="mb-0"><i class="fas fa-envelope text-success me-2"></i> hello@orucuba.com</p>
+                    </address>
+                    
+                    <div class="border-top border-secondary pt-4">
+                        <h5 class="fw-bold mb-3 text-uppercase small">Payment Methods</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <i class="fab fa-cc-visa fa-2x text-muted"></i>
+                            <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
+                            <i class="fab fa-cc-amex fa-2x text-muted"></i>
+                            <i class="fab fa-cc-paypal fa-2x text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary mt-4 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="mb-0 small text-muted">&copy; 2025 orucuba gardens. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="list-inline small mb-0">
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-success btn-back-to-top shadow" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.min.js"></script>
+    
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>
