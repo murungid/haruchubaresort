@@ -119,37 +119,48 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="fas fa-tree me-2"></i>
-                <span class="fw-bold">Haruchuba</span>
-                <span class="d-none d-sm-inline ms-1">Resort</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="rooms.html">Rooms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="restaurant.html">Dining</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="experiences.html">Experiences</a>
-                    </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-outline-light mt-2 mt-lg-0" href="booking.html">Book Now</a>
-                    </li>
-                </ul>
-            </div>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light-green sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+            <i class="fas fa-tree me-2 text-success"></i>
+            <span class="fw-bold">Haruchuba</span>
+            <span class="d-none d-sm-inline ms-1">Resort</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark fw-medium" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-medium" href="rooms.html">Rooms</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark fw-medium" href="#" id="diningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dining
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="diningDropdown">
+                        <li><a class="dropdown-item" href="restaurant.html">The Canopy Restaurant</a></li>
+                        <li><a class="dropdown-item" href="bar.html">Jungle Bar</a></li>
+                        <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-medium" href="booking.html">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-medium" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-success mt-2 mt-lg-0 px-3 py-2" href="booking.html">Book Now</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <header class="rooms-hero position-relative overflow-hidden d-flex align-items-center">
