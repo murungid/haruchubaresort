@@ -1,0 +1,138 @@
+/* Custom CSS for Haruchuba Resort */
+
+/* Color Palette */
+:root {
+    --dark-green: #1a3a2f;
+    --medium-green: #2d6a4f;
+    --light-green: #d8f3dc;
+    --success-green: #40916c;
+    --white: #ffffff;
+}
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* Background Colors */
+.bg-dark-green {
+    background-color: var(--dark-green) !important;
+}
+
+.bg-light-green {
+    background-color: var(--light-green) !important;
+}
+
+.bg-success {
+    background-color: var(--success-green) !important;
+}
+
+/* Text Colors */
+.text-success {
+    color: var(--success-green) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    min-height: 500px;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Booking Header */
+.booking-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contact Header */
+.contact-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1535827841776-24af3a1e3ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: var(--success-green);
+    border-color: var(--success-green);
+}
+
+.btn-success:hover {
+    background-color: var(--medium-green);
+    border-color: var(--medium-green);
+}
+
+.btn-outline-success {
+    color: var(--success-green);
+    border-color: var(--success-green);
+}
+
+.btn-outline-success:hover {
+    background-color: var(--success-green);
+    color: white;
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form Styles */
+.form-control:focus, .form-select:focus {
+    border-color: var(--success-green);
+    box-shadow: 0 0 0 0.25rem rgba(64, 145, 108, 0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+}

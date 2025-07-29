@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Treehouse Villa | Haruchuba Resort</title>
+    <meta name="description" content="Experience our signature Treehouse Villa - an eco-luxury retreat nestled in the jungle canopy with panoramic views and premium amenities.">
+    
+    <!-- Preload resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fancybox for image gallery -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <style>
+        .rooms-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            min-height: 600px;
+        }
+        
+        .amenity-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(42, 93, 69, 0.1);
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            color: #2a5d45;
+            font-size: 1.5rem;
+        }
+        
+        .room-gallery-main {
+            height: 400px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .room-gallery-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .room-gallery-main:hover img {
+            transform: scale(1.03);
+        }
+        
+        .thumbnail-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .thumbnail:hover {
+            border-color: #2a5d45;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .highlight-card {
+            border-left: 4px solid #2a5d45;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .booking-cta {
+            background: linear-gradient(135deg, #2a5d45 0%, #3a7d5d 100%);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-tree me-2"></i>
+                <span class="fw-bold">Haruchuba</span>
+                <span class="d-none d-sm-inline ms-1">Resort</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="restaurant.html">Dining</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experiences.html">Experiences</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-light mt-2 mt-lg-0" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="rooms-hero position-relative overflow-hidden d-flex align-items-center">
+        <div class="container text-white text-center position-relative" data-aos="fade-up">
+            <h1 class="display-2 fw-bold mb-4">Treehouse Villa</h1>
+            <p class="lead fs-3 mb-5">Elevated luxury among the treetops</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="#gallery" class="btn btn-outline-light btn-lg px-4">View Gallery</a>
+                <a href="#book-now" class="btn btn-success btn-lg px-4">Book Your Stay</a>
+            </div>
+        </div>
+        <div class="scroll-indicator position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <i class="fas fa-chevron-down fa-2x text-white"></i>
+        </div>
+    </header>
+
+    <!-- Room Intro -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="pe-lg-5">
+                        <span class="text-success fw-bold text-uppercase small">Signature Accommodation</span>
+                        <h2 class="display-4 fw-bold mb-4">Your Canopy Sanctuary</h2>
+                        <p class="lead">Perched 20 feet above the forest floor, our Treehouse Villa offers an unparalleled connection with nature without compromising on luxury.</p>
+                        <p>Built using sustainable materials and designed to blend seamlessly with the surrounding jungle, this 650 sq.ft. retreat features floor-to-ceiling windows, a private balcony with panoramic views, and thoughtful amenities that celebrate the beauty of the natural world.</p>
+                        
+                        <div class="d-flex align-items-center mt-4">
+                            <div class="me-4">
+                                <p class="h3 fw-bold text-success mb-0">$320</p>
+                                <small class="text-muted">per night</small>
+                            </div>
+                            <div>
+                                <p class="mb-0 small">+ taxes & fees</p>
+                                <p class="mb-0 small">Minimum 2-night stay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="room-gallery-main">
+                        <a href="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-fancybox="gallery" data-caption="Treehouse Villa Exterior">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Treehouse Villa" loading="lazy">
+                        </a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <div class="thumbnail">
+                            <a href="https://images.unsplash.com/photo-1566669437684-d6f4c728f90b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-fancybox="gallery" data-caption="Bedroom with Canopy Bed">
+                                <img src="https://images.unsplash.com/photo-1566669437684-d6f4c728f90b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bedroom">
+                            </a>
+                        </div>
+                        <div class="thumbnail">
+                            <a href="https://images.unsplash.com/photo-1566669437688-e85e6fd6e436?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-fancybox="gallery" data-caption="Luxury Bathroom">
+                                <img src="https://images.unsplash.com/photo-1566669437688-e85e6fd6e436?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Bathroom">
+                            </a>
+                        </div>
+                        <div class="thumbnail">
+                            <a href="https://images.unsplash.com/photo-1566669437686-c2c891d6d3a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-fancybox="gallery" data-caption="Private Balcony">
+                                <img src="https://images.unsplash.com/photo-1566669437686-c2c891d6d3a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Balcony">
+                            </a>
+                        </div>
+                        <div class="thumbnail">
+                            <a href="https://images.unsplash.com/photo-1566669437686-c2c891d6d3a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" data-fancybox="gallery" data-caption="Jungle View">
+                                <img src="https://images.unsplash.com/photo-1566669437686-c2c891d6d3a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="View">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="py-5 bg-light-green">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="h-100 p-4 text-center">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3 class="h5">King Canopy Bed</h3>
+                        <p class="mb-0">Handcrafted four-poster bed with premium linens and jungle views</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-100 p-4 text-center">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h3 class="h5">Rainforest Shower</h3>
+                        <p class="mb-0">Open-air shower with dual rainfall showerheads</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-100 p-4 text-center">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3 class="h5">Private Balcony</h3>
+                        <p class="mb-0">Spacious deck with lounge chairs and panoramic jungle views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Description -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <span class="text-success fw-bold text-uppercase small">Experience</span>
+                    <h2 class="display-4 fw-bold mb-5">Designed for Connection</h2>
+                </div>
+            </div>
+            
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="room-gallery-main">
+                        <img src="https://images.unsplash.com/photo-1566669437684-d6f4c728f90b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bedroom" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="h2 fw-bold mb-4">Sleep Among the Trees</h3>
+                    <p class="lead">Wake up to the sounds of the jungle canopy from your king-size four-poster bed.</p>
+                    <p>Our carefully designed bedroom features:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Handcrafted canopy bed with premium organic linens</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Blackout curtains for uninterrupted sleep</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Integrated bedside charging stations</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Climate control with silent AC</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Evening turndown service with local chocolate</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row g-5 align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="room-gallery-main">
+                        <img src="https://images.unsplash.com/photo-1566669437688-e85e6fd6e436?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Bathroom" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="h2 fw-bold mb-4">Spa-Inspired Bath</h3>
+                    <p class="lead">Refresh in your private jungle spa sanctuary.</p>
+                    <p>The bathroom features:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Open-air rainforest shower with dual showerheads</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Organic bath amenities from local artisans</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Plush robes and slippers</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Double vanity with natural stone counters</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Eco-friendly hair dryer and straightener</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="room-gallery-main">
+                        <img src="https://images.unsplash.com/photo-1566669437686-c2c891d6d3a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Balcony" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="h2 fw-bold mb-4">Your Private Canopy</h3>
+                    <p class="lead">Soak in panoramic jungle views from your elevated deck.</p>
+                    <p>The balcony includes:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Comfortable lounge chairs with weather-proof cushions</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Small dining table for private breakfasts</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Binoculars for wildlife spotting</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Privacy screens that maintain the view</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Evening lighting for ambiance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-5 py-lg-7 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5" data-aos="fade-up">
+                    <span class="text-success fw-bold text-uppercase small">Details</span>
+                    <h2 class="display-4 fw-bold mb-4">Thoughtful Amenities</h2>
+                    <p class="lead">Every detail has been considered for your comfort and enjoyment.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="highlight-card h-100">
+                        <h3 class="h4 fw-bold mb-3">In-Room Features</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-wifi text-success me-2"></i> High-speed WiFi</li>
+                            <li class="mb-2"><i class="fas fa-tv text-success me-2"></i> Smart TV with streaming</li>
+                            <li class="mb-2"><i class="fas fa-wine-glass-alt text-success me-2"></i> Mini-bar with local treats</li>
+                            <li class="mb-2"><i class="fas fa-coffee text-success me-2"></i> Premium coffee/tea station</li>
+                            <li class="mb-2"><i class="fas fa-fan text-success me-2"></i> Silent ceiling fan + AC</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="highlight-card h-100">
+                        <h3 class="h4 fw-bold mb-3">Sustainable Touches</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-leaf text-success me-2"></i> Organic toiletries</li>
+                            <li class="mb-2"><i class="fas fa-recycle text-success me-2"></i> Water refill stations</li>
+                            <li class="mb-2"><i class="fas fa-solar-panel text-success me-2"></i> Solar-powered electricity</li>
+                            <li class="mb-2"><i class="fas fa-bottle-water text-success me-2"></i> Glass water bottles</li>
+                            <li class="mb-2"><i class="fas fa-tree text-success me-2"></i> Sustainably sourced materials</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section class="parallax-section py-7 text-white" style="background-image: url('https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');">
+        <div class="overlay bg-dark-gradient"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <h2 class="display-4 fw-bold mb-4">"The most magical place I've ever stayed"</h2>
+                    <p class="lead mb-5">Waking up to monkeys playing in the trees outside our villa was unforgettable. The attention to detail and commitment to sustainability made our stay even more special.</p>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle me-3" width="60" alt="Guest" loading="lazy">
+                        <div class="text-start">
+                            <p class="mb-0 fw-bold">Sarah J.</p>
+                            <p class="mb-0 small">New York, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section id="book-now" class="py-5 py-lg-7">
+        <div class="container">
+            <div class="booking-cta p-5 text-white" data-aos="fade-up">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-4 mb-lg-0">
+                        <h2 class="display-5 fw-bold mb-3">Ready for Your Canopy Escape?</h2>
+                        <p class="lead mb-0">Experience the magic of our Treehouse Villa for yourself.</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="booking.html" class="btn btn-light btn-lg px-4 py-3">Book Your Stay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="fas fa-tree me-2"></i>
+                        <span class="fw-bold">Haruchuba</span>
+                        <span class="ms-1">Resort</span>
+                    </a>
+                    <p class="mb-4">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    <div class="social-icons mb-4 mb-lg-0">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="rooms.html" class="text-white text-decoration-none">Rooms</a></li>
+                        <li class="mb-2"><a href="dining.html" class="text-white text-decoration-none">Dining</a></li>
+                        <li class="mb-2"><a href="spa.html" class="text-white text-decoration-none">Spa</a></li>
+                        <li class="mb-2"><a href="experiences.html" class="text-white text-decoration-none">Experiences</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="sustainability.html" class="text-white text-decoration-none">Sustainability</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4">Contact</h5>
+                    <address class="mb-4">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> Jungle Valley Road, KM 12.5</p>
+                        <p class="mb-3">Costa Verde, Central America</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i> +505 1234 5678</p>
+                        <p class="mb-0"><i class="fas fa-envelope text-success me-2"></i> hello@haruchuba.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 small">&copy; 2025 Haruchuba Resort. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="list-inline-item mx-2">•</li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+                        <li class="list-inline-item mx-2">•</li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-success btn-back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/main.min.js"></script>
+    
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+        
+        // Thumbnail gallery interaction
+        document.querySelectorAll('.thumbnail img').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                const mainImage = this.closest('.thumbnail-container').previousElementSibling.querySelector('img');
+                const tempSrc = mainImage.src;
+                mainImage.src = this.src.replace('200', '800');
+                this.src = tempSrc.replace('800', '200');
+            });
+        });
+    </script>
+</body>
+</html>

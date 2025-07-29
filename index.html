@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haruchuba Resort - Luxury Eco Retreat</title>
+    <meta name="description" content="Experience sustainable luxury at Haruchuba Resort. Nature-inspired accommodations, gourmet dining, and wellness in harmony with the environment.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2a5d45">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-tree me-2"></i>
+                <span class="fw-bold">Haruchuba</span>
+                <span class="d-none d-sm-inline ms-1">Resort</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="diningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dining
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="diningDropdown">
+                            <li><a class="dropdown-item" href="restaurant.html">The Canopy Restaurant</a></li>
+                            <li><a class="dropdown-item" href="bar.html">Jungle Bar</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-light mt-2 mt-lg-0" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <header class="hero-section position-relative overflow-hidden">
+        <div class="video-background">
+            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay d-flex align-items-center">
+            <div class="container text-white text-center position-relative" data-aos="fade-up" data-aos-duration="800">
+                <h1 class="display-3 fw-bold mb-4">Reconnect With Nature</h1>
+                <p class="lead fs-4 mb-5">Sustainable luxury in the heart of pristine wilderness</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="booking.html" class="btn btn-success btn-lg px-4 py-3">Book Your Stay</a>
+                    <a href="#explore" class="btn btn-outline-light btn-lg px-4 py-3">Explore More</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="explore" class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="fw-bold text-success mb-4 display-5">Discover Haruchuba</h2>
+                    <p class="lead fs-4">Nestled in the heart of pristine wilderness, Haruchuba Resort offers an unparalleled escape from the ordinary.</p>
+                    <p>Our eco-luxury resort combines sustainable practices with world-class amenities, creating a harmonious balance between indulgence and environmental responsibility. Whether you seek adventure, relaxation, or simply a connection with nature, Haruchuba provides the perfect setting.</p>
+                    <div class="mt-4">
+                        <a href="about.html" class="btn btn-outline-success">Our Sustainability Story</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Haruchuba Resort" class="img-fluid rounded-4 shadow-lg">
+                        <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-end rounded-top shadow-sm ms-n3 mb-n3">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-success p-2 rounded me-2">
+                                    <i class="fas fa-leaf text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="mb-0 fw-bold">Eco-Certified</p>
+                                    <small class="text-muted">Since 2015</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 py-lg-7 bg-light-green">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Our Offerings</span>
+                <h2 class="display-5 fw-bold mb-4">Experience Luxury in Harmony</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Each aspect of Haruchuba is designed to connect you with nature while providing exceptional comfort and service.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1582719471380-cd82f1765b42?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Luxury Cottages" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Luxury Accommodations</h3>
+                            <p class="card-text">Experience comfort in our standard rooms, each designed to blend seamlessly with the natural surroundings while offering modern amenities.</p>
+                            <a href="rooms.html" class="btn btn-link text-success text-decoration-none p-0">Explore Rooms <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Gourmet Dining" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Gourmet Dining</h3>
+                            <p class="card-text">Savor locally-sourced, organic cuisine prepared by our award-winning chefs at The Canopy Restaurant, with options for every dietary preference.</p>
+                            <a href="restaurant.html" class="btn btn-link text-success text-decoration-none p-0">View Menus <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
+                        <div class="card-img-top overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Wellness Spa" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title text-success">Wellness Sanctuary</h3>
+                            <p class="card-text">Rejuvenate with our nature-inspired spa treatments using organic ingredients and traditional healing techniques in our jungle oasis.</p>
+                            <a href="spa.html" class="btn btn-link text-success text-decoration-none p-0">Discover Spa <i class="fas fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Preview Section -->
+    <section class="py-5 py-lg-7 bg-white">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8" data-aos="fade-right">
+                    <span class="text-success fw-bold text-uppercase small">Accommodations</span>
+                    <h2 class="display-5 fw-bold mb-0">Our Standard Rooms</h2>
+                </div>
+                <div class="col-md-4 text-md-end" data-aos="fade-left">
+                    <a href="rooms.html" class="btn btn-outline-success">View All Rooms</a>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100 hover-effect">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Standard Room" loading="lazy">
+                            <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 rounded-bl">
+                                <small class="fw-bold">From $220/night</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Standard Room</h3>
+                            <p class="card-text">Comfortable and eco-friendly rooms with modern amenities and views of the surrounding nature.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-bed text-success me-2"></i> King or Twin beds</li>
+                                <li class="mb-2"><i class="fas fa-expand text-success me-2"></i> 450 sq.ft.</li>
+                                <li class="mb-2"><i class="fas fa-wifi text-success me-2"></i> High-speed WiFi</li>
+                                <li class="mb-2"><i class="fas fa-snowflake text-success me-2"></i> Air conditioning</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="rooms.html" class="btn btn-success w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100 hover-effect">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1566669437688-e85e6fd6e436?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Standard Room with View" loading="lazy">
+                            <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 rounded-bl">
+                                <small class="fw-bold">From $280/night</small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="h5 card-title">Standard Room with View</h3>
+                            <p class="card-text">Our standard rooms with premium views of the jungle or gardens, featuring a private balcony.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-bed text-success me-2"></i> King bed</li>
+                                <li class="mb-2"><i class="fas fa-expand text-success me-2"></i> 500 sq.ft.</li>
+                                <li class="mb-2"><i class="fas fa-umbrella-beach text-success me-2"></i> Private balcony</li>
+                                <li class="mb-2"><i class="fas fa-mountain text-success me-2"></i> Jungle or garden view</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <a href="rooms.html" class="btn btn-success w-100">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant & Bar Section -->
+    <section class="py-5 py-lg-7 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Culinary Experience</span>
+                <h2 class="display-5 fw-bold mb-4">Dining at Haruchuba</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">From farm-to-table cuisine to crafted jungle cocktails, our dining experiences celebrate local flavors.</p>
+            </div>
+            
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="The Canopy Restaurant" loading="lazy">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark-gradient text-white">
+                            <h3 class="h4 mb-1">The Canopy Restaurant</h3>
+                            <p class="mb-0 small">Award-winning cuisine with panoramic jungle views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="h2 fw-bold mb-4">Farm-to-Table Excellence</h3>
+                    <p>Our signature restaurant features seasonal menus crafted from ingredients sourced within 50 miles of the resort. Executive Chef Elena Rodriguez creates innovative dishes that highlight regional flavors with contemporary techniques.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Breakfast: 7-11am | Dinner: 6-10pm</li>
+                        <li class="mb-2"><i class="fas fa-utensils text-success me-2"></i> Contemporary local cuisine</li>
+                        <li class="mb-2"><i class="fas fa-seedling text-success me-2"></i> 80% ingredients locally sourced</li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <a href="restaurant.html" class="btn btn-success">View Menu</a>
+                        <a href="restaurant.html#reservations" class="btn btn-outline-success">Reserve a Table</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-5 align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Jungle Bar" loading="lazy">
+                        <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark-gradient text-white">
+                            <h3 class="h4 mb-1">Jungle Bar</h3>
+                            <p class="mb-0 small">Crafted cocktails by the infinity pool</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="h2 fw-bold mb-4">Sunset Cocktails & More</h3>
+                    <p>Our jungle-inspired bar features signature cocktails made with local spirits, fresh fruits, and herbs from our garden. The perfect spot to unwind after a day of adventure or to enjoy live music on weekends.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Daily: 12pm-11pm</li>
+                        <li class="mb-2"><i class="fas fa-cocktail text-success me-2"></i> Signature jungle cocktails</li>
+                        <li class="mb-2"><i class="fas fa-music text-success me-2"></i> Live music Fridays & Saturdays</li>
+                    </ul>
+                    <div class="d-flex gap-3">
+                        <a href="bar.html" class="btn btn-success">View Drink Menu</a>
+                        <a href="bar.html#events" class="btn btn-outline-success">See Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 py-lg-7 bg-success text-white">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-white-50 fw-bold text-uppercase small">Guest Experiences</span>
+                <h2 class="display-5 fw-bold mb-4">What Our Guests Say</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The standard rooms were surprisingly spacious and comfortable. The attention to sustainability while maintaining luxury is impressive."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle me-3" width="50" height="50" alt="Sarah J." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Sarah J.</h6>
+                                    <small class="text-white-50">New York, USA</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The Canopy Restaurant was a culinary journey! Each dish told a story of the region. The jungle bar makes the best cocktails we've ever had."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50" height="50" alt="Michael T." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Michael T.</h6>
+                                    <small class="text-white-50">London, UK</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 bg-success-light shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text mb-4">"The spa treatments using local ingredients were rejuvenating. Our room was comfortable with all the modern comforts. The staff was friendly and knowledgeable."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Priya K." loading="lazy">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">Priya K.</h6>
+                                    <small class="text-white-50">Mumbai, India</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Moments</span>
+                <h2 class="display-5 fw-bold mb-4">Gallery</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Explore the beauty of Haruchuba through our guests' favorite moments.</p>
+            </div>
+            
+            <div class="row g-3 gallery-grid">
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Resort Overview">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Resort View" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="150">
+                    <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Infinity Pool">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Pool Area" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Sunset Dining">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Dining Area" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="250">
+                    <a href="https://images.unsplash.com/photo-1535827841776-24af3a1e3ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Spa Retreat">
+                        <img src="https://images.unsplash.com/photo-1535827841776-24af3a1e3ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Spa" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Nature Walk">
+                        <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Nature Walk" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="350">
+                    <a href="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Sunset View">
+                        <img src="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Sunset View" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+                <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Jungle Bar Evening">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Jungle Bar" loading="lazy" style="height: 280px;">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="gallery.html" class="btn btn-outline-success">View Full Gallery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-5 py-lg-7 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-4">Stay Connected</h2>
+                    <p class="lead mb-5">Subscribe to our newsletter for exclusive offers, seasonal packages, and the latest updates from Haruchuba Resort.</p>
+                    
+                    <form class="row g-3 justify-content-center">
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <input type="email" class="form-control form-control-lg" placeholder="Your email address" aria-label="Your email address">
+                                <button class="btn btn-success" type="submit">Subscribe</button>
+                            </div>
+                            <small class="text-muted mt-2 d-block">We respect your privacy. Unsubscribe at any time.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-white">
+        <div class="row g-0">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="h-100 p-5 d-flex flex-column justify-content-center">
+                    <h2 class="display-5 fw-bold mb-4">Find Us</h2>
+                    <address class="mb-4">
+                        <p class="fw-bold mb-2">Haruchuba Resort</p>
+                        <p>Jungle Valley Road, KM 12.5<br>
+                        Costa Verde, Central America</p>
+                    </address>
+                    
+                    <div class="mb-4">
+                        <h3 class="h5 fw-bold mb-3">Contact</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i> +505 1234 5678</li>
+                            <li class="mb-2"><i class="fas fa-envelope text-success me-2"></i> hello@haruchuba.com</li>
+                            <li class="mb-2"><i class="fas fa-headset text-success me-2"></i> 24/7 Reservations</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <a href="contact.html" class="btn btn-outline-success me-2">Contact Us</a>
+                        <a href="#" class="btn btn-success">Get Directions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="h-100 min-vh-50">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.982528999507!2d-84.15235692471063!3d9.935857573722016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e422b3f689d5%3A0x7f7b1a5b0eef1a7f!2sManuel%20Antonio%20National%20Park!5e0!3m2!1sen!2scr!4v1689876543210!5m2!1sen!2scr" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand d-flex align-items-center mb-4">
+                        <i class="fas fa-tree fa-2x text-success me-3"></i>
+                        <div>
+                            <h2 class="h4 mb-0 fw-bold">Haruchuba</h2>
+                            <p class="mb-0 small text-muted">Eco Resort & Spa</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-muted">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    
+                    <div class="social-icons mb-4">
+                        <a href="#" class="text-white me-3" aria-label="Facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="TripAdvisor" data-bs-toggle="tooltip" data-bs-placement="top" title="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                        <a href="#" class="text-white" aria-label="Pinterest" data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="me-3 text-success">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 small text-muted">Reservation Hotline</p>
+                            <p class="mb-0 fw-bold">+505 1234 5678</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Explore</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="rooms.html" class="nav-link p-0 text-muted">Rooms</a></li>
+                        <li class="nav-item mb-2"><a href="restaurant.html" class="nav-link p-0 text-muted">Dining</a></li>
+                        <li class="nav-item mb-2"><a href="spa.html" class="nav-link p-0 text-muted">Wellness</a></li>
+                        <li class="nav-item mb-2"><a href="activities.html" class="nav-link p-0 text-muted">Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Information</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="booking.html" class="nav-link p-0 text-muted">Booking</a></li>
+                        <li class="nav-item mb-2"><a href="gallery.html" class="nav-link p-0 text-muted">Gallery</a></li>
+                        <li class="nav-item mb-2"><a href="offers.html" class="nav-link p-0 text-muted">Special Offers</a></li>
+                        <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQ</a></li>
+                        <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+                        <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Newsletter</h5>
+                    <p class="text-muted mb-3">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    
+                    <form class="mb-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Your email" aria-label="Your email">
+                            <button class="btn btn-success" type="button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <small class="text-muted">We'll never share your email with anyone else.</small>
+                    </form>
+                    
+                    <div class="border-top border-secondary pt-4">
+                        <h5 class="fw-bold mb-3 text-uppercase small">Payment Methods</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <i class="fab fa-cc-visa fa-2x text-muted"></i>
+                            <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
+                            <i class="fab fa-cc-amex fa-2x text-muted"></i>
+                            <i class="fab fa-cc-paypal fa-2x text-muted"></i>
+                            <i class="fab fa-cc-discover fa-2x text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary mt-4 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="mb-0 small text-muted">&copy; 2025 Haruchuba Resort. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="list-inline small mb-0">
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Terms of Service</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-success btn-back-to-top shadow" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Fancybox for Gallery -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.min.js"></script>
+    
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>

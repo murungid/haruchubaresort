@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay - Haruchuba Resort</title>
+    <meta name="description" content="Reserve your luxury eco-retreat at Haruchuba Resort. Experience sustainable luxury in harmony with nature.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-black" href="index.html">
+                <i class="fas fa-tree me-2"></i>
+                <span class="fw-bold">Haruchuba</span>
+                <span class="d-none d-sm-inline ms-1">Resort</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="diningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dining
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="diningDropdown">
+                            <li><a class="dropdown-item" href="restaurant.html">The Canopy Restaurant</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html#jungle-bar">Jungle Bar</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-black" href="booking.html">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-dark mt-2 mt-lg-0" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Booking Hero -->
+    <header class="booking-hero position-relative overflow-hidden">
+        <div class="hero-overlay d-flex align-items-center">
+            <div class="container text-white text-center position-relative" data-aos="fade-up">
+                <h1 class="display-3 fw-bold mb-4">Book Your Stay</h1>
+                <p class="lead fs-4">Experience the harmony of luxury and nature</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="text-center mb-5">
+                                <span class="text-success fw-bold text-uppercase small">Reservation Request</span>
+                                <h2 class="display-5 fw-bold mb-3">Plan Your Escape</h2>
+                                <p class="lead">Please fill out the form below to request a reservation. We'll contact you shortly to confirm your booking.</p>
+                            </div>
+                            
+                            <form id="bookingForm" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Full Name *</label>
+                                        <input type="text" class="form-control form-control-lg" id="name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide your name.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control form-control-lg" id="email" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid email.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control form-control-lg" id="phone">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="guests" class="form-label">Number of Guests *</label>
+                                        <select class="form-select form-select-lg" id="guests" required>
+                                            <option value="" selected disabled>Select...</option>
+                                            <option value="1">1 Adult</option>
+                                            <option value="2">2 Adults</option>
+                                            <option value="3">2 Adults + 1 Child</option>
+                                            <option value="4">2 Adults + 2 Children</option>
+                                            <option value="5+">Group (5+ People)</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select number of guests.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="arrival" class="form-label">Arrival Date *</label>
+                                        <input type="date" class="form-control form-control-lg" id="arrival" required>
+                                        <div class="invalid-feedback">
+                                            Please select arrival date.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="departure" class="form-label">Departure Date *</label>
+                                        <input type="date" class="form-control form-control-lg" id="departure" required>
+                                        <div class="invalid-feedback">
+                                            Please select departure date.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="roomType" class="form-label">Room Preference</label>
+                                        <select class="form-select form-select-lg" id="roomType">
+                                            <option value="" selected disabled>Select preferred room type</option>
+                                            <option value="standard">Standard Room</option>
+                                            <option value="standard-view">Standard Room with View</option>
+                                            <option value="no-preference">No Preference</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Special Requests</label>
+                                        <textarea class="form-control form-control-lg" id="message" rows="4" placeholder="Dietary restrictions, accessibility needs, celebrations, etc."></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button class="btn btn-success btn-lg px-5 py-3 w-100" type="submit">
+                                            <i class="fas fa-paper-plane me-2"></i> Submit Booking Request
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div id="thankYouMessage" class="text-center py-5" style="display: none;">
+                                <i class="fas fa-check-circle text-success display-1 mb-4"></i>
+                                <h2 class="fw-bold mb-3">Thank You!</h2>
+                                <p class="lead">Your booking request has been submitted successfully.</p>
+                                <p>We'll contact you within 24 hours to confirm your reservation at Haruchuba Resort.</p>
+                                <a href="index.html" class="btn btn-outline-success mt-3">Back to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Book With Us -->
+    <section class="py-5 py-lg-7 bg-light-green">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Benefits</span>
+                <h2 class="display-5 fw-bold mb-4">Why Book With Us</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-leaf fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Sustainable Luxury</h3>
+                            <p class="mb-0">Experience eco-friendly accommodations without compromising on comfort or service.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-percent fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Best Rate Guarantee</h3>
+                            <p class="mb-0">Book directly with us for the best available rates and special offers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 bg-transparent text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 mb-4 mx-auto" style="width: 80px; height: 80px;">
+                                <i class="fas fa-headset fa-2x"></i>
+                            </div>
+                            <h3 class="h5 fw-bold mb-3">Personalized Service</h3>
+                            <p class="mb-0">Our team is available 24/7 to assist with your stay and special requests.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand d-flex align-items-center mb-4">
+                        <i class="fas fa-tree fa-2x text-success me-3"></i>
+                        <div>
+                            <h2 class="h4 mb-0 fw-bold">Haruchuba</h2>
+                            <p class="mb-0 small text-muted">Eco Resort & Spa</p>
+                        </div>
+                    </div>
+                    <p class="mb-4 text-muted">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    
+                    <div class="social-icons mb-4">
+                        <a href="#" class="text-white me-3" aria-label="Facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white me-3" aria-label="TripAdvisor" data-bs-toggle="tooltip" data-bs-placement="top" title="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                        <a href="#" class="text-white" aria-label="Pinterest" data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="d-flex align-items-center">
+                        <div class="me-3 text-success">
+                            <i class="fas fa-phone-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <p class="mb-0 small text-muted">Reservation Hotline</p>
+                            <p class="mb-0 fw-bold">+256 780834586</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Explore</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="rooms.html" class="nav-link p-0 text-muted">Rooms</a></li>
+                        <li class="nav-item mb-2"><a href="restaurant.html" class="nav-link p-0 text-muted">Dining</a></li>
+                        <li class="nav-item mb-2"><a href="spa.html" class="nav-link p-0 text-muted">Spa</a></li>
+                        <li class="nav-item mb-2"><a href="activities.html" class="nav-link p-0 text-muted">Activities</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Information</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="booking.html" class="nav-link p-0 text-muted">Booking</a></li>
+                        <li class="nav-item mb-2"><a href="gallery.html" class="nav-link p-0 text-muted">Gallery</a></li>
+                        <li class="nav-item mb-2"><a href="offers.html" class="nav-link p-0 text-muted">Special Offers</a></li>
+                        <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5 class="fw-bold mb-4 text-uppercase small">Newsletter</h5>
+                    <p class="text-muted mb-3">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    
+                    <form class="mb-4">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Your email" aria-label="Your email">
+                            <button class="btn btn-success" type="button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <small class="text-muted">We'll never share your email with anyone else.</small>
+                    </form>
+                    
+                    <div class="border-top border-secondary pt-4">
+                        <h5 class="fw-bold mb-3 text-uppercase small">Payment Methods</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <i class="fab fa-cc-visa fa-2x text-muted"></i>
+                            <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
+                            <i class="fab fa-cc-amex fa-2x text-muted"></i>
+                            <i class="fab fa-cc-paypal fa-2x text-muted"></i>
+                            <i class="fab fa-cc-discover fa-2x text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary mt-4 pt-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="mb-0 small text-muted">&copy; 2025 Haruchuba Resort. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <ul class="list-inline small mb-0">
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Terms of Service</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
+                            <li class="list-inline-item mx-2 text-muted">•</li>
+                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-success btn-back-to-top shadow" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.min.js"></script>
+    
+    <!-- Initialize Scripts -->
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialize tooltips
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+
+        // Booking form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            
+            if (form.checkValidity()) {
+                // Simulate form submission
+                form.style.display = 'none';
+                document.getElementById('thankYouMessage').style.display = 'block';
+                
+                // In a real implementation, you would send the form data to your server here
+                // Example using fetch:
+                /*
+                const formData = new FormData(form);
+                fetch('your-server-endpoint', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    form.style.display = 'none';
+                    document.getElementById('thankYouMessage').style.display = 'block';
+                })
+                .catch(error => {
+                    alert('There was an error submitting your form. Please try again.');
+                });
+                */
+            }
+            
+            form.classList.add('was-validated');
+        }, false);
+    </script>
+</body>
+</html>

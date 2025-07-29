@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Haruchuba Resort</title>
+    <meta name="description" content="Discover the story behind Haruchuba Resort - a passion for sustainable luxury and deep connection with nature in the heart of the jungle.">
+    
+    <!-- Preload resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            min-height: 600px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #2a5d45;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            border: 4px solid #2a5d45;
+        }
+        
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            overflow: hidden;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-img {
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+        
+        .value-card {
+            border-left: 4px solid #2a5d45;
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            background-color: rgba(42, 93, 69, 0.05);
+            transform: translateX(5px);
+        }
+        
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fas fa-tree me-2"></i>
+                <span class="fw-bold">Haruchuba</span>
+                <span class="d-none d-sm-inline ms-1">Resort</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dining.html">Dining</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="spa.html">Spa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-light mt-2 mt-lg-0" href="booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="about-hero position-relative d-flex align-items-center">
+        <div class="container text-white text-center position-relative" data-aos="fade-up">
+            <h1 class="display-2 fw-bold mb-4">Our Story</h1>
+            <p class="lead fs-3 mx-auto" style="max-width: 700px;">Where passion for nature meets commitment to sustainable luxury</p>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <span class="text-success fw-bold text-uppercase small">Haruchuba Resort</span>
+                    <h2 class="display-4 fw-bold mb-4">A Vision Rooted in Nature</h2>
+                    <p class="lead">Founded in 2020, Haruchuba Resort was brought to life by Tooro Richard  a visionary and the founder of Kabarole Tours Ltd  with a mission to create a place where comfort, culture, and nature unite effortlessly.</p>
+                    <p>Driven by his deep love for Uganda and a storyteller’s heart, Richard designed Haruchuba not just as a luxury escape, but as a vibrant base for tourists to explore the heart of the Pearl of Africa. Whether you're relaxing at the resort or venturing out on a guided tour, his desire is simple: to give every guest the best care, the richest experiences, and stories they'll carry for life.</p>
+                    <p>With roots in the tourism world through Kabarole Tours Ltd, Richard brings a rare mix of hospitality and narration where every corner of Haruchuba tells a story, and every stay becomes part of Uganda’s unfolding adventure.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Resort Founder" loading="lazy">
+                        <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-end rounded-top shadow-sm">
+                            <p class="mb-0 fw-bold">TOORO RICHARD</p>
+                            <small class="text-muted">Founder & CEO</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-5 py-lg-7 bg-light-green">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Our Journey</span>
+                <h2 class="display-4 fw-bold mb-4">Milestones</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Key moments that shaped Haruchuba into what it is today</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="h4 fw-bold">2010</h3>
+                    <p class="text-success fw-bold">The Vision Begins</p>
+                    <p>Alejandro purchases 50 acres of secondary jungle with the dream of creating an eco-retreat that would fund conservation efforts in the region.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="h4 fw-bold">2020</h3>
+                    <p class="text-success fw-bold">First Treehouse Built</p>
+                    <p>After three years of careful planning and sustainable sourcing, the first treehouse villa is completed using locally-sourced materials and traditional building techniques.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="h4 fw-bold">2022</h3>
+                    <p class="text-success fw-bold">Eco-Certification Achieved</p>
+                    <p>Haruchuba becomes the first resort in the region to receive Platinum certification from the Sustainable Tourism Institute.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="h4 fw-bold">2023</h3>
+                    <p class="text-success fw-bold">Community Partnership</p>
+                    <p>We establish our "Jungle to Table" program, sourcing 80% of our ingredients from within 50 miles and training local farmers in organic practices.</p>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="h4 fw-bold">2024</h3>
+                    <p class="text-success fw-bold">Conservation Expansion</p>
+                    <p>Haruchuba partners with the National Wildlife Foundation to protect an additional 200 acres of primary rainforest adjacent to our property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Meet The Team</span>
+                <h2 class="display-4 fw-bold mb-4">Passionate Stewards</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Our dedicated team brings Haruchuba's vision to life every day</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Alejandro Morales" loading="lazy">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold mb-1">TOORO TICHARD</h3>
+                            <p class="text-success mb-3">Founder & CEO</p>
+                            <p class="small">A seasoned tourism expert and passionate storyteller, Tooro Richard combines deep cultural insight with a visionary approach to hospitality, guiding Haruchuba’s sustainable growth </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Elena Rodriguez" loading="lazy">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold mb-1">Elena Rodriguez</h3>
+                            <p class="text-success mb-3">Executive Chef</p>
+                            <p class="small">With 15 years of international experience, Chef Elena creates culinary magic while supporting local producers.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card team-card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Carlos Mendez" loading="lazy">
+                        <div class="card-body text-center">
+                            <h3 class="h5 fw-bold mb-1">Carlos Mendez</h3>
+                            <p class="text-success mb-3">Head of Sustainability</p>
+                            <p class="small">A local conservation expert, Carlos ensures every aspect of our operations meets rigorous environmental standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-5 py-lg-7 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-success fw-bold text-uppercase small">Our Commitment</span>
+                <h2 class="display-4 fw-bold mb-4">Core Values</h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Principles that guide every decision we make</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="p-4 value-card h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success p-3 rounded-circle me-4 text-white">
+                                <i class="fas fa-leaf fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold mb-3">Environmental Stewardship</h3>
+                                <p class="mb-0">We go beyond sustainability to actively regenerate the ecosystems we inhabit, using renewable energy, water conservation systems, and habitat restoration projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 value-card h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success p-3 rounded-circle me-4 text-white">
+                                <i class="fas fa-hands-helping fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold mb-3">Community Partnership</h3>
+                                <p class="mb-0">85% of our staff are from local communities, and we invest 10% of profits into education and infrastructure projects in surrounding villages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 value-card h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success p-3 rounded-circle me-4 text-white">
+                                <i class="fas fa-heart fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold mb-3">Authentic Experiences</h3>
+                                <p class="mb-0">We design encounters that foster genuine connections with nature and culture, from guided wildlife walks to traditional craft workshops with local artisans.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 value-card h-100">
+                        <div class="d-flex align-items-start">
+                            <div class="bg-success p-3 rounded-circle me-4 text-white">
+                                <i class="fas fa-gem fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold mb-3">Thoughtful Luxury</h3>
+                                <p class="mb-0">Every indulgence is carefully considered - organic linens, artisan-crafted furnishings, and amenities that delight while minimizing environmental impact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="parallax-section py-7 text-white" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');">
+        <div class="overlay bg-dark-gradient"></div>
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center" data-aos="fade-up">
+                    <span class="text-success fw-bold text-uppercase small">Sustainability</span>
+                    <h2 class="display-3 fw-bold mb-4">Beyond Greenwashing</h2>
+                    <p class="lead mb-5">Our commitment to the environment is woven into every aspect of Haruchuba, from construction to daily operations.</p>
+                    
+                    <div class="row g-4 text-start">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="bg-success p-3 rounded-circle text-white">
+                                        <i class="fas fa-solar-panel"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold">100% Renewable Energy</h3>
+                                    <p>Solar panels and micro-hydro systems power our entire resort with clean energy.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="bg-success p-3 rounded-circle text-white">
+                                        <i class="fas fa-recycle"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold">Zero Waste</h3>
+                                    <p>We've achieved 92% waste diversion from landfills through composting and recycling programs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="bg-success p-3 rounded-circle text-white">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold">Reforestation</h3>
+                                    <p>Over 5,000 native trees planted, restoring 50 acres of degraded land.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="d-flex">
+                                <div class="me-4">
+                                    <div class="bg-success p-3 rounded-circle text-white">
+                                        <i class="fas fa-faucet"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h4 fw-bold">Water Conservation</h3>
+                                    <p>Rainwater harvesting and greywater systems reduce consumption by 65%.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 py-lg-7">
+        <div class="container">
+            <div class="bg-success rounded-4 p-5 text-center text-white" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-4">Experience Our Difference</h2>
+                <p class="lead mb-5 mx-auto" style="max-width: 700px;">Discover how luxury and sustainability can coexist in perfect harmony at Haruchuba Resort.</p>
+                <div class="d-flex gap-3 justify-content-center">
+                    <a href="rooms.html" class="btn btn-light btn-lg px-4">View Accommodations</a>
+                    <a href="contact.html" class="btn btn-outline-light btn-lg px-4">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-green text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="index.html">
+                        <i class="fas fa-tree me-2"></i>
+                        <span class="fw-bold">Haruchuba</span>
+                        <span class="ms-1">Resort</span>
+                    </a>
+                    <p class="mb-4">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    <div class="social-icons mb-4 mb-lg-0">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="rooms.html" class="text-white text-decoration-none">Rooms</a></li>
+                        <li class="mb-2"><a href="dining.html" class="text-white text-decoration-none">Dining</a></li>
+                        <li class="mb-2"><a href="spa.html" class="text-white text-decoration-none">Spa</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="fw-bold mb-4">Information</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="sustainability.html" class="text-white text-decoration-none">Sustainability</a></li>
+                        <li class="mb-2"><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="fw-bold mb-4">Contact</h5>
+                    <address class="mb-4">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt text-success me-2"></i> Jungle Valley Road, KM 12.5</p>
+                        <p class="mb-3">Costa Verde, Central America</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i> +505 1234 5678</p>
+                        <p class="mb-0"><i class="fas fa-envelope text-success me-2"></i> hello@haruchuba.com</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4 border-light">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 small">&copy; 2025 Haruchuba Resort. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <ul class="list-inline small mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li class="list-inline-item mx-2">•</li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+                        <li class="list-inline-item mx-2">•</li>
+                        <li class="list-inline-item"><a href="#" class="text-white text-decoration-none">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="btn btn-success btn-back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.min.js"></script>
+    
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>
