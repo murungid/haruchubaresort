@@ -10,13 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.checkValidity()) {
                 // Hide form and show thank you message
                 bookingForm.style.display = 'none';
-                document.getElementById('thankYouMessage').style.display = 'block';
+                const thankYouMessage = document.getElementById('thankYouMessage');
+                if (thankYouMessage) {
+                    thankYouMessage.style.display = 'block';
+                }
                 
                 // Reset form
                 this.reset();
                 this.classList.remove('was-validated');
             } else {
                 this.classList.add('was-validated');
+                // Scroll to first invalid field
+                const firstInvalid = this.querySelector(':invalid');
+                if (firstInvalid) {
+                    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstInvalid.focus();
+                }
             }
         }, false);
     }
@@ -31,13 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.checkValidity()) {
                 // Hide form and show thank you message
                 contactForm.style.display = 'none';
-                document.getElementById('contactThankYou').style.display = 'block';
+                const contactThankYou = document.getElementById('contactThankYou');
+                if (contactThankYou) {
+                    contactThankYou.style.display = 'block';
+                }
                 
                 // Reset form
                 this.reset();
                 this.classList.remove('was-validated');
             } else {
                 this.classList.add('was-validated');
+                // Scroll to first invalid field
+                const firstInvalid = this.querySelector(':invalid');
+                if (firstInvalid) {
+                    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstInvalid.focus();
+                }
             }
         }, false);
     }
@@ -63,32 +81,37 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
 // Back to top button with improved behavior
 const backToTopButton = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-    const scrollPosition = window.pageYOffset;
-    const windowHeight = window.innerHeight;
-    
-    // Show button after scrolling 1 screen height
-    if (scrollPosition > windowHeight) {
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
-    
-    // Add/remove shadow based on scroll position
-    const navbar = document.querySelector('.navbar');
-    if (scrollPosition > 10) {
-        navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
-    }
-});
-
-backToTopButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+if (backToTopButton) {
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.pageYOffset;
+        const windowHeight = window.innerHeight;
+        
+        // Show button after scrolling 1 screen height
+        if (scrollPosition > windowHeight) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+        
+        // Add/remove shadow based on scroll position
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            if (scrollPosition > 10) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
     });
-});
+
+    backToTopButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orucuba gardens - Luxury Eco Retreat</title>
-    <meta name="description" content="Experience sustainable luxury at orucuba gardens. Nature-inspired accommodations, gourmet dining, and wellness in harmony with the environment.">
+    <title>Orucuba gardens - Eco Retreat</title>
+    <meta name="description" content="Experience simplicity at orucuba gardens. Nature, accommodations, traditional dining, and wellness in harmony with the environment.">
     
     <!-- Preload critical resources -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" as="style">
@@ -25,7 +25,193 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.min.css">
+    <style>
+        :root {
+            --bs-success-rgb: 42, 93, 69;
+            --bs-light-green: #f5f9f7;
+            --bs-dark-green: #1a3a2a;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .bg-light-green {
+            background-color: var(--bs-light-green);
+        }
+        
+        .navbar-light-green {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero-section {
+            position: relative;
+            height: 90vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+        
+        .full-width-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--bs-dark);
+            font-size: 1.5rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+            40% {transform: translateY(-20px) translateX(-50%);}
+            60% {transform: translateY(-10px) translateX(-50%);}
+        }
+        
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .gallery-grid img {
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-grid a:hover img {
+            transform: scale(1.03);
+        }
+        
+        .btn-success {
+            background-color: var(--bs-success);
+            border-color: var(--bs-success);
+        }
+        
+        .btn-outline-success {
+            color: var(--bs-success);
+            border-color: var(--bs-success);
+        }
+        
+        .btn-outline-success:hover {
+            background-color: var(--bs-success);
+            color: white;
+        }
+        
+        .bg-success-light {
+            background-color: rgba(var(--bs-success-rgb), 0.1);
+        }
+        
+        .bg-dark-gradient {
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        }
+        
+        .btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: none;
+            z-index: 99;
+        }
+        
+        /* Improved card styling */
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        /* Section spacing */
+        section {
+            padding: 5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 3rem 0;
+            }
+            
+            .hero-section {
+                height: 70vh;
+                min-height: 500px;
+            }
+        }
+        
+        /* Image cards enhancements */
+        .img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .img-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .img-card-caption {
+            padding: 1rem;
+            background: white;
+        }
+        
+        /* Better margins and spacing */
+        .content-block {
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            margin-bottom: 3rem;
+        }
+        
+        .lead {
+            margin-bottom: 2rem;
+        }
+    </style>
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -59,7 +245,7 @@
                             Dining
                         </a>
                         <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="diningDropdown">
-                            <li><a class="dropdown-item" href="restaurant.html">The Canopy Restaurant</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html"> Restaurant</a></li>
                             <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
                         </ul>
                     </li>
@@ -82,18 +268,19 @@
 
     <!-- Hero Section with Video Background -->
     <header class="hero-section position-relative overflow-hidden">
-        <div class="video-background">
-            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-waterfall-in-forest-2213-large.mp4" type="video/mp4">
-            </video>
+       <div class="image-background">
+        <img src="images/eco.jpg" 
+         alt="Waterfall in forest" 
+         loading="lazy"
+         class="full-width-image">
         </div>
         <div class="hero-overlay d-flex align-items-center">
             <div class="container text-white text-center position-relative" data-aos="fade-up" data-aos-duration="800">
-                <h1 class="display-3 fw-bold mb-4">Reconnect With Nature</h1>
-                <p class="lead fs-4 mb-5">Sustainable luxury in the heart of pristine wilderness</p>
+                <h1 class="display-3 fw-bold mb-4 text-dark">Orucuba Gardens: Gather Here as Omuko (Honored Guest)</h1>
+                <p class="lead fs-4 mb-5 text-dark">Sustainable comfort in the heart of pristine mother nature</p>
                 <div class="d-flex gap-3 justify-content-center">
                     <a href="booking.html" class="btn btn-success btn-lg px-4 py-3">Book Your Stay</a>
-                    <a href="#explore" class="btn btn-outline-light btn-lg px-4 py-3">Explore More</a>
+                    <a href="#explore" class="btn btn-outline-success btn-lg px-4 py-3">Explore More</a>
                 </div>
             </div>
         </div>
@@ -105,25 +292,27 @@
     <!-- About Section -->
     <section id="explore" class="py-5 py-lg-7">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center g-5">
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                    <h2 class="fw-bold text-success mb-4 display-5">Discover orucuba</h2>
-                    <p class="lead fs-4">Nestled in the heart of pristine wilderness, orucuba gardens offers an unparalleled escape from the ordinary.</p>
-                    <p>Our eco-luxury gardens combines sustainable practices with world-class amenities, creating a harmonious balance between indulgence and environmental responsibility. Whether you seek adventure, relaxation, or simply a connection with nature, orucuba provides the perfect setting.</p>
-                    <div class="mt-4">
-                        <a href="about.html" class="btn btn-outline-success">Our Sustainability Story</a>
+                    <div class="pe-lg-4">
+                        <h2 class="fw-bold text-success mb-4 display-5">Discover orucuba</h2>
+                        <p class="lead fs-4 mb-4">Orucuba is a rutooro word desribing a well thoughtout meal prepared by many people for very important Guests. In the Batooro culture that guest would be the son in law (omuko).you as our very important guest we provide you with the Batooro cultural program that includes traditional food prepared especially for you</p>
+                        <p class="mb-4">Our eco friendly gardens are live  with birds such as sunbirds,tinkabirds,wagtiles,firefinches,turacos,hornbils extrar and others are chameleons,butterflies,bettles,plants such as cycards creating a harmonious balance between indugienious and ornamental shade trees. Whether you seek adventure, relaxation, or simply a connection with nature, orucuba provides the perfect setting.</p>
+                        <div class="mt-4">
+                            <a href="about.html" class="btn btn-outline-success">Our Sustainability Story</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="position-relative">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="orucuba gardens" class="img-fluid rounded-4 shadow-lg">
-                        <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-end rounded-top shadow-sm ms-n3 mb-n3">
+                    <div class="position-relative img-card">
+                        <img src="images/eco.jpg" alt="orucuba gardens" class="img-fluid w-100">
+                        <div class="img-card-caption">
                             <div class="d-flex align-items-center">
-                                <div class="bg-success p-2 rounded me-2">
+                                <div class="bg-success p-2 rounded me-3">
                                     <i class="fas fa-leaf text-white"></i>
                                 </div>
                                 <div>
-                                    <p class="mb-0 fw-bold">Eco-Certified</p>
+                                    <p class="mb-0 fw-bold">Eco-Gardens</p>
                                     <small class="text-muted">Since 2020</small>
                                 </div>
                             </div>
@@ -139,43 +328,37 @@
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="text-success fw-bold text-uppercase small">Our Offerings</span>
-                <h2 class="display-5 fw-bold mb-4">Experience Luxury in Harmony</h2>
+                <h2 class="display-5 fw-bold mb-4">Experience simplicity in Harmony</h2>
                 <p class="lead mx-auto" style="max-width: 700px;">Each aspect of orucuba is designed to connect you with nature while providing exceptional comfort and service.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
                         <div class="card-img-top overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1582719471380-cd82f1765b42?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Luxury Cottages" loading="lazy">
+                            <img src="images/chair.JPG" class="img-fluid w-100 h-100" alt="Luxury Cottages" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <h3 class="h5 card-title text-success">Luxury Accommodations</h3>
-                            <p class="card-text">Experience comfort in our standard rooms, each designed to blend seamlessly with the natural surroundings while offering modern amenities.</p>
-                            <a href="rooms.html" class="btn btn-link text-success text-decoration-none p-0">Explore Rooms <i class="fas fa-arrow-right ms-2"></i></a>
+                            <h3 class="h5 card-title text-success"> Accommodations</h3>
+                            <p class="card-text">Experience comfort in our standard rooms, each designed to blend seamlessly with the natural surroundings .</p>
+                            <a href="rooms.html" class="btn btn-link text-success text-decoration-none p-0 d-inline-flex align-items-center">
+                                Explore Rooms <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
                         <div class="card-img-top overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Gourmet Dining" loading="lazy">
+                            <img src="images/dinninghall.jpg" class="img-fluid w-100 h-100" alt="Gourmet Dining" loading="lazy" style="object-fit: cover;">
                         </div>
                         <div class="card-body">
                             <h3 class="h5 card-title text-success">Gourmet Dining</h3>
-                            <p class="card-text">Savor locally-sourced, organic cuisine prepared by our award-winning chefs at The Canopy Restaurant, with options for every dietary preference.</p>
-                            <a href="restaurant.html" class="btn btn-link text-success text-decoration-none p-0">View Menus <i class="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 border-0 shadow-sm overflow-hidden hover-effect">
-                        <div class="card-img-top overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Wellness Spa" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="h5 card-title text-success">Wellness Sanctuary</h3>
-                            <p class="card-text">Rejuvenate with our nature-inspired spa treatments using organic ingredients and traditional healing techniques in our jungle oasis.</p>
-                            <a href="spa.html" class="btn btn-link text-success text-decoration-none p-0">Discover Spa <i class="fas fa-arrow-right ms-2"></i></a>
+                           <p class="card-text">
+                            Inspired by her grandmother's traditional recipes and sharpened by global culinary training, our chef blends local flavors with international flair—serving up organic, locally-sourced dishes for every dietary preference at The Orucuba  Restaurant.
+                            </p>
+                            <a href="restaurant.html" class="btn btn-link text-success text-decoration-none p-0 d-inline-flex align-items-center">
+                                View Menus <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -186,64 +369,47 @@
     <!-- Rooms Preview Section -->
     <section class="py-5 py-lg-7 bg-white">
         <div class="container">
-            <div class="row align-items-center mb-5">
-                <div class="col-md-8" data-aos="fade-right">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
                     <span class="text-success fw-bold text-uppercase small">Accommodations</span>
-                    <h2 class="display-5 fw-bold mb-0">Our Standard Rooms</h2>
-                </div>
-                <div class="col-md-4 text-md-end" data-aos="fade-left">
-                    <a href="rooms.html" class="btn btn-outline-success">View All Rooms</a>
+                    <h2 class="display-5 fw-bold mb-3">Our Standard Rooms</h2>
+                    <p class="lead">Simple, cozy, and eco-friendly rooms designed for pure comfort with modern essentials</p>
                 </div>
             </div>
             
-            <div class="row g-4">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
                     <div class="card border-0 shadow-sm h-100 hover-effect">
-                        <div class="position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Standard Room" loading="lazy">
-                            <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 rounded-bl">
-                                <small class="fw-bold">From $20/night</small>
+                        <div class="row g-0">
+                            <div class="col-md-6 position-relative">
+                                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid h-100 w-100" alt="Standard Room" loading="lazy" style="object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 rounded-bl">
+                                    <small class="fw-bold">From Ugshs.60000/night</small>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Standard Room</h3>
-                            <p class="card-text">Comfortable and eco-friendly rooms with modern amenities and views of the surrounding nature.</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-bed text-success me-2"></i> single or Twin beds</li>
-                                <li class="mb-2"><i class="fas fa-expand text-success me-2"></i> 450 sq.ft.</li>
-                                <li class="mb-2"><i class="fas fa-wifi text-success me-2"></i> High-speed WiFi</li>
-                                <li class="mb-2"><i class="fas fa-snowflake text-success me-2"></i> Air conditioning</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="rooms.html" class="btn btn-success w-100">View Details</a>
+                            <div class="col-md-6">
+                                <div class="card-body h-100 d-flex flex-column">
+                                    <h3 class="h4 card-title">Standard Room</h3>
+                                    <p class="card-text">
+                                        Simple, cozy, and eco-friendly rooms designed for pure comfort, complete with  essentials to make you feel right at home.
+                                    </p>
+                                    <ul class="list-unstyled mb-4">
+                                        <li class="mb-2"><i class="fas fa-bed text-success me-2"></i> Single beds</li>
+                                        <li class="mb-2"><i class="fas fa-expand text-success me-2"></i> 450 sq.ft.</li>
+                                        <li class="mb-2"><i class="fas fa-sun text-success me-2"></i> Garden views</li>
+                                    </ul>
+                                    <div class="mt-auto">
+                                        <a href="rooms.html" class="btn btn-success w-100">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card border-0 shadow-sm h-100 hover-effect">
-                        <div class="position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1566669437688-e85e6fd6e436?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Standard Room with View" loading="lazy">
-                            <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1 rounded-bl">
-                                <small class="fw-bold">From $80/night</small>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="h5 card-title">Standard Room with View</h3>
-                            <p class="card-text">Our standard rooms with premium views of the jungle or gardens, featuring a private balcony.</p>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-bed text-success me-2"></i> King bed</li>
-                                <li class="mb-2"><i class="fas fa-expand text-success me-2"></i> 500 sq.ft.</li>
-                                <li class="mb-2"><i class="fas fa-umbrella-beach text-success me-2"></i> Private balcony</li>
-                                <li class="mb-2"><i class="fas fa-mountain text-success me-2"></i> Jungle or gardens view</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="rooms.html" class="btn btn-success w-100">View Details</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="rooms.html" class="btn btn-outline-success px-4">View All Rooms</a>
             </div>
         </div>
     </section>
@@ -254,55 +420,59 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="text-success fw-bold text-uppercase small">Culinary Experience</span>
                 <h2 class="display-5 fw-bold mb-4">Dining at orucuba</h2>
-                <p class="lead mx-auto" style="max-width: 700px;">From farm-to-table cuisine to crafted jungle cocktails, our dining experiences celebrate local flavors.</p>
+                <p class="lead mx-auto" style="max-width: 700px;">From farm to table cuisine to crafted  cocktails, our dining experiences celebrate local flavors which include traditional .</p>
             </div>
             
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                    <div class="img-card">
                         <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="The Canopy Restaurant" loading="lazy">
-                        <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark-gradient text-white">
-                            <h3 class="h4 mb-1">The Canopy Restaurant</h3>
+                        <div class="img-card-caption bg-dark text-white">
+                            <h3 class="h4 mb-1">Our Restaurant</h3>
                             <p class="mb-0 small">Award-winning cuisine with panoramic jungle views</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h3 class="h2 fw-bold mb-4">Farm-to-Table Excellence</h3>
-                    <p>Our signature restaurant features seasonal menus crafted from ingredients sourced within 50 miles of the gardens. Executive Chef Elena Rodriguez creates innovative dishes that highlight regional flavors with contemporary techniques.</p>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Breakfast: 7-11am | Dinner: 6-10pm</li>
-                        <li class="mb-2"><i class="fas fa-utensils text-success me-2"></i> Contemporary local cuisine</li>
-                        <li class="mb-2"><i class="fas fa-seedling text-success me-2"></i> 80% ingredients locally sourced</li>
-                    </ul>
-                    <div class="d-flex gap-3">
-                        <a href="restaurant.html" class="btn btn-success">View Menu</a>
-                        <a href="restaurant.html#reservations" class="btn btn-outline-success">Reserve a Table</a>
+                    <div class="ps-lg-4">
+                        <h3 class="h2 fw-bold mb-4">Farm to Table Excellence</h3>
+                        <p class="mb-4">Our restaurant offers truely traditional recipes inheritated from our ancestors and also international dishes that can be prepared on order.you can also choose to dine with the founders family to share experiences .our special beverages coffee,our coffe is picked from trees aging more than 30years and are handpicked, dried, pounded and grained traditionally and offer you a truely homemade coffee statisifaction,herbal teas our healing teas include wild herbals,lemon grass and other secrate grandmas inherated recipes good for your health </p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-clock text-success me-2"></i> Breakfast: 7-11am | Dinner: 6-10pm</li>
+                            <li class="mb-2"><i class="fas fa-utensils text-success me-2"></i> Contemporary local cuisine</li>
+                            <li class="mb-2"><i class="fas fa-seedling text-success me-2"></i> 100% ingredients locally sourced</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <a href="restaurant.html" class="btn btn-success">View Menu</a>
+                            <a href="restaurant.html#reservations" class="btn btn-outline-success">Reserve a Table</a>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="row g-5 align-items-center flex-lg-row-reverse">
                 <div class="col-lg-6" data-aos="fade-left">
-                    <div class="position-relative rounded-4 overflow-hidden shadow-lg">
+                    <div class="img-card">
                         <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="Jungle Bar" loading="lazy">
-                        <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark-gradient text-white">
-                            <h3 class="h4 mb-1">Jungle Bar</h3>
-                            <p class="mb-0 small">Crafted cocktails by the infinity pool</p>
+                        <div class="img-card-caption bg-dark text-white">
+                            <h3 class="h4 mb-1">Bar</h3>
+                            <p class="mb-0 small">Crafted cocktails from our local fruits</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-right">
-                    <h3 class="h2 fw-bold mb-4">activities</h3>
-                    <p>Step into the rhythm of village life with our curated activities that blend culture, nature, and adventure. From peaceful cycling routes through scenic landscapes to hands-on village experiences, every moment is a chance to connect deeper with Uganda's heart.</p>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fas fa-clock text-success me-2"></i>Guided cycling tours through the village </li>
-                        <li class="mb-2"><i class="fas fa-cocktail text-success me-2"></i>Participate in local farming & crafts </li>
-                        <li class="mb-2"><i class="fas fa-music text-success me-2"></i> Traditional dance & drumming evenings</li>
-                    </ul>
-                    <div class="d-flex gap-3">
-                        <a href="activities.html#bar" class="btn btn-success">View activities Menu</a>
-                        <a href="activities.html#events" class="btn btn-outline-success">See Events</a>
+                    <div class="pe-lg-4">
+                        <h3 class="h2 fw-bold mb-4">Activities</h3>
+                        <p class="mb-4">Step into the rhythm of village life with our curated activities that blend culture, nature, and adventure. From peaceful cycling routes through scenic landscapes to hands-on village experiences, every moment is a chance to connect deeper with Uganda's heart.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-cocktail text-success me-2"></i>Participate in local farming & crafts </li>
+                            <li class="mb-2"><i class="fas fa-music text-success me-2"></i> Traditional dance & drumming evenings</li>
+                            <li class="mb-2"><i class="fas fa-bicycle text-success me-2"></i> Guided nature walks & cycling tours</li>
+                        </ul>
+                        <div class="d-flex gap-3">
+                            <a href="activities.html#bar" class="btn btn-success">View activities Menu</a>
+                            <a href="activities.html#events" class="btn btn-outline-success">See Events</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -377,7 +547,7 @@
                                 <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Priya K." loading="lazy">
                                 <div>
                                     <h6 class="mb-0 fw-bold">Priya K.</h6>
-                                    <small class="text-white-50">Mumbai, India</small>
+                                    <small class="text-white-50">kampala,uganda</small>
                                 </div>
                             </div>
                         </div>
@@ -398,39 +568,59 @@
             
             <div class="row g-3 gallery-grid">
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-                    <a href="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="gardens Overview">
-                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="gardens View" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid w-100" alt="gardens View" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">Gardens Overview</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="150">
-                    <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Infinity Pool">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Pool Area" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid w-100" alt="Pool Area" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">Infinity Pool</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-2 col-6" data-aos="fade-up" data-aos-delay="200">
-                    <a href="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Sunset Dining">
-                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Dining Area" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="images/gallery.jpeg" class="img-fluid w-100" alt="Dining Area" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">Sunset Dining</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 col-6" data-aos="fade-up" data-aos-delay="250">
-                    <a href="https://images.unsplash.com/photo-1535827841776-24af3a1e3ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Spa Retreat">
-                        <img src="https://images.unsplash.com/photo-1535827841776-24af3a1e3ac0?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Spa" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="images/gallery.jpeg" class="img-fluid w-100" alt="Dining Area" loading="lazy">
+                        <div class="img-card-caption">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="300">
-                    <a href="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Nature Walk">
-                        <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Nature Walk" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid w-100" alt="Nature Walk" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">Nature Walk</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 col-6" data-aos="fade-up" data-aos-delay="350">
-                    <a href="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Sunset View">
-                        <img src="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Sunset View" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="images/kids.jpg" class="img-fluid w-100" alt="Sunset View" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">Sunset View</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-                    <a href="https://images.unsplash.com/photo-1564501049551-ec3f25ead60f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" data-fancybox="gallery" data-caption="Jungle Bar Evening">
-                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="img-fluid rounded-3 shadow-sm w-100 h-100 object-fit-cover" alt="Jungle Bar" loading="lazy" style="height: 280px;">
-                    </a>
+                    <div class="img-card">
+                        <img src="images/team.jpg" class="img-fluid w-100" alt="Jungle Bar" loading="lazy">
+                        <div class="img-card-caption">
+                            <p class="mb-0 small">team</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -477,7 +667,7 @@
                     <div class="mb-4">
                         <h3 class="h5 fw-bold mb-3">Contact</h3>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i>+256 780834586</li>
+                            <li class="mb-2"><i class="fas fa-phone-alt text-success me-2"></i>+256 790517125, +256 752057390</li>
                             <li class="mb-2"><i class="fas fa-envelope text-success me-2"></i> hello@orucuba.com</li>
                             <li class="mb-2"><i class="fas fa-headset text-success me-2"></i> 24/7 Reservations</li>
                         </ul>
@@ -497,120 +687,105 @@
         </div>
     </section>
 
-    <!-- Modern Footer -->
-    <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4 mb-4">
-                    <div class="footer-brand d-flex align-items-center mb-4">
-                        <i class="fas fa-tree fa-2x text-success me-3"></i>
-                        <div>
-                            <h2 class="h4 mb-0 fw-bold">orucuba</h2>
-                            <p class="mb-0 small text-muted">Eco gardens & Spa</p>
-                        </div>
-                    </div>
-                    <p class="mb-4 text-muted">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
-                    
-                    <div class="social-icons mb-4">
-                        <a href="#" class="text-white me-3" aria-label="Facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-white me-3" aria-label="Instagram" data-bs-toggle="tooltip" data-bs-placement="top" title="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-white me-3" aria-label="Twitter" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-white me-3" aria-label="TripAdvisor" data-bs-toggle="tooltip" data-bs-placement="top" title="TripAdvisor">
-                            <i class="fab fa-tripadvisor"></i>
-                        </a>
-                        <a href="#" class="text-white" aria-label="Pinterest" data-bs-toggle="tooltip" data-bs-placement="top" title="Pinterest">
-                            <i class="fab fa-pinterest"></i>
-                        </a>
-                    </div>
-                    
-                    <div class="d-flex align-items-center">
-                        <div class="me-3 text-success">
-                            <i class="fas fa-phone-alt fa-lg"></i>
-                        </div>
-                        <div>
-                            <p class="mb-0 small text-muted">Reservation Hotline</p>
-                            <p class="mb-0 fw-bold">+256 780-834-586</p>
-                        </div>
+    <!-- Modern Tech-Inspired Footer -->
+    <footer class="bg-dark text-white pt-4 pb-3">
+    <div class="container">
+        <div class="row g-4">
+            <!-- Brand Column -->
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="footer-brand d-flex align-items-center mb-3">
+                    <i class="fas fa-tree text-success me-2 fs-4"></i>
+                    <div>
+                        <h2 class="h5 mb-0 fw-bold">orucuba</h2>
+                        <p class="mb-0 small text-muted">Eco Retreat & Nature Hub</p>
                     </div>
                 </div>
+                <p class="small text-muted mb-3">Sustainable comfort in the heart of pristine nature.</p>
                 
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5 class="fw-bold mb-4 text-uppercase small">Explore</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
-                        <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">About Us</a></li>
-                        <li class="nav-item mb-2"><a href="rooms.html" class="nav-link p-0 text-muted">Rooms</a></li>
-                        <li class="nav-item mb-2"><a href="restaurant.html" class="nav-link p-0 text-muted">Dining</a></li>
-                        <li class="nav-item mb-2"><a href="spa.html" class="nav-link p-0 text-muted">Wellness</a></li>
-                        <li class="nav-item mb-2"><a href="activities.html" class="nav-link p-0 text-muted">Activities</a></li>
-                    </ul>
+                <div class="social-icons mb-3">
+                    <a href="#" class="text-white me-2" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white me-2" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white me-2" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white me-2" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
                 
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5 class="fw-bold mb-4 text-uppercase small">Information</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="booking.html" class="nav-link p-0 text-muted">Booking</a></li>
-                        <li class="nav-item mb-2"><a href="gallery.html" class="nav-link p-0 text-muted">Gallery</a></li>
-                        <li class="nav-item mb-2"><a href="offers.html" class="nav-link p-0 text-muted">Special Offers</a></li>
-                        <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-muted">FAQ</a></li>
-                        <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
-                        <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-muted">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 mb-4">
-                    <h5 class="fw-bold mb-4 text-uppercase small">Newsletter</h5>
-                    <p class="text-muted mb-3">Subscribe to receive updates, access to exclusive deals, and more.</p>
-                    
-                    <form class="mb-4">
-                        <div class="input-group">
-                            <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Your email" aria-label="Your email">
-                            <button class="btn btn-success" type="button">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </div>
-                        <small class="text-muted">We'll never share your email with anyone else.</small>
-                    </form>
-                    
-                    <div class="border-top border-secondary pt-4">
-                        <h5 class="fw-bold mb-3 text-uppercase small">Payment Methods</h5>
-                        <div class="d-flex flex-wrap gap-2">
-                            <i class="fab fa-cc-visa fa-2x text-muted"></i>
-                            <i class="fab fa-cc-mastercard fa-2x text-muted"></i>
-                            <i class="fab fa-cc-amex fa-2x text-muted"></i>
-                            <i class="fab fa-cc-paypal fa-2x text-muted"></i>
-                            <i class="fab fa-cc-discover fa-2x text-muted"></i>
-                        </div>
+                <div class="d-flex align-items-center small">
+                    <i class="fas fa-phone-alt text-success me-2"></i>
+                    <div>
+                        <p class="mb-0 text-muted">Reservations:</p>
+                        <p class="mb-0 fw-bold">+256 790517125</p>
                     </div>
                 </div>
             </div>
             
-            <div class="border-top border-secondary mt-4 pt-4">
-                <div class="row align-items-center">
-                    <div class="col-md-6 mb-3 mb-md-0">
-                        <p class="mb-0 small text-muted">&copy; 2025 orucuba gardens. All rights reserved.</p>
+            <!-- Links Column -->
+            <div class="col-lg-4 col-md-6 mb-3 mb-lg-0">
+                <div class="row">
+                    <div class="col-6">
+                        <h5 class="h6 fw-bold mb-3 text-uppercase">Explore</h5>
+                        <ul class="nav flex-column small">
+                            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
+                            <li class="nav-item mb-2"><a href="rooms.html" class="nav-link p-0 text-muted">Rooms</a></li>
+                            <li class="nav-item mb-2"><a href="restaurant.html" class="nav-link p-0 text-muted">Dining</a></li>
+                            <li class="nav-item mb-2"><a href="activities.html" class="nav-link p-0 text-muted">Activities</a></li>
+                        </ul>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <ul class="list-inline small mb-0">
-                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Privacy Policy</a></li>
-                            <li class="list-inline-item mx-2 text-muted">•</li>
-                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Terms of Service</a></li>
-                            <li class="list-inline-item mx-2 text-muted">•</li>
-                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Accessibility</a></li>
-                            <li class="list-inline-item mx-2 text-muted">•</li>
-                            <li class="list-inline-item"><a href="#" class="text-decoration-none text-muted">Sitemap</a></li>
+                    <div class="col-6">
+                        <h5 class="h6 fw-bold mb-3 text-uppercase">About</h5>
+                        <ul class="nav flex-column small">
+                            <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-muted">Our Story</a></li>
+                            <li class="nav-item mb-2"><a href="sustainability.html" class="nav-link p-0 text-muted">Sustainability</a></li>
+                            <li class="nav-item mb-2"><a href="blog.html" class="nav-link p-0 text-muted">Blog</a></li>
+                            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-4">
+                <h5 class="h6 fw-bold mb-3 text-uppercase">Stay Updated</h5>
+                <form class="mb-3">
+                    <div class="input-group input-group-sm">
+                        <input type="email" class="form-control bg-dark border-secondary text-white" placeholder="Your email">
+                        <button class="btn btn-success" type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <small class="text-muted">Subscribe for exclusive offers</small>
+                </form>
+                
+                <div class="small">
+                    <h5 class="h6 fw-bold mb-2 text-uppercase">Our Eco Features</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-success bg-opacity-10 text-success small">Solar Power</span>
+                        <span class="badge bg-success bg-opacity-10 text-success small">Organic Farm</span>
+                        <span class="badge bg-success bg-opacity-10 text-success small">Water Recycling</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+        
+        <div class="border-top border-secondary mt-3 pt-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+                <p class="mb-2 mb-md-0 text-muted">&copy; 2025 orucuba gardens. All rights reserved.</p>
+                <div class="d-flex">
+                    <a href="#" class="text-muted me-3 text-decoration-none">Privacy</a>
+                    <a href="#" class="text-muted me-3 text-decoration-none">Terms</a>
+                    <a href="#" class="text-muted text-decoration-none">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Back to Top Button -->
     <a href="#" class="btn btn-success btn-back-to-top shadow" id="backToTop">
@@ -627,9 +802,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.min.js"></script>
-    
-    <!-- Initialize Scripts -->
     <script>
         // Initialize AOS animation
         AOS.init({
@@ -650,16 +822,16 @@
         });
         
         // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', function() {
+            var backToTop = document.getElementById('backToTop');
             if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('show');
+                backToTop.style.display = 'flex';
             } else {
-                backToTopButton.classList.remove('show');
+                backToTop.style.display = 'none';
             }
         });
         
-        backToTopButton.addEventListener('click', (e) => {
+        document.getElementById('backToTop').addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});
         });

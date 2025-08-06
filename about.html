@@ -28,7 +28,7 @@
     <style>
         .about-hero {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80');
+                        url('images/foreground.jpg');
             background-size: cover;
             background-position: center;
             height: 70vh;
@@ -108,35 +108,44 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-green sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <i class="fas fa-tree me-2"></i>
-                <span class="fw-bold">orucuba</span>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light-green sticky-top py-2 py-lg-3">
+        <div class="container px-3 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center text-dark" href="index.html">
+                <i class="fas fa-tree me-2 text-success"></i>
+                <span class="fw-bold">Orucuba</span>
                 <span class="d-none d-sm-inline ms-1">gardens</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active text-dark fw-medium" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rooms.html">Rooms</a>
+                        <a class="nav-link text-dark fw-medium" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark fw-medium" href="#" id="diningDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dining
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="diningDropdown">
+                            <li><a class="dropdown-item" href="restaurant.html"> Restaurant</a></li>
+                            <li><a class="dropdown-item" href="restaurant.html#breakfast">Sunrise Breakfast</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="restaurant.html">Dining</a>
+                        <a class="nav-link text-dark fw-medium" href="activities.html">Activities</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="spa.html">Spa</a>
+                        <a class="nav-link text-dark fw-medium" href="booking.html">Booking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About</a>
+                        <a class="nav-link text-dark fw-medium" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-2">
-                        <a class="btn btn-outline-light mt-2 mt-lg-0" href="booking.html">Book Now</a>
+                        <a class="btn btn-success mt-2 mt-lg-0 px-3 py-2" href="booking.html">Book Now</a>
                     </li>
                 </ul>
             </div>
@@ -158,13 +167,13 @@
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
                     <span class="text-success fw-bold text-uppercase small">orucuba gardens</span>
                     <h2 class="display-4 fw-bold mb-4">A Vision Rooted in Nature</h2>
-                    <p class="lead">Founded in 2020, orucuba gardens was brought to life by Tooro Richard  a visionary and the founder of Kabarole Tours Ltd  with a mission to create a place where comfort, culture, and nature unite effortlessly.</p>
+                    <p bold> Founded in 2020, orucuba gardens was brought to life by Tooro Richard  a visionary and the founder of Kabarole Tours Ltd  with a mission to create a place where comfort, culture, and nature unite effortlessly.</p>
                     <p>Driven by his deep love for Uganda and a storyteller’s heart, Richard designed orucuba not just as a luxury escape, but as a vibrant base for tourists to explore the heart of the Pearl of Africa. Whether you're relaxing at the gardens or venturing out on a guided tour, his desire is simple: to give every guest the best care, the richest experiences, and stories they'll carry for life.</p>
                     <p>With roots in the tourism world through Kabarole Tours Ltd, Richard brings a rare mix of hospitality and narration where every corner of orucuba tells a story, and every stay becomes part of Uganda’s unfolding adventure.</p>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="position-relative rounded-4 overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid w-100" alt="gardens Founder" loading="lazy">
+                        <img src="images/akiiki.jpg" class="img-fluid w-100" alt="gardens Founder" loading="lazy">
                         <div class="position-absolute bottom-0 start-0 bg-white p-3 rounded-end rounded-top shadow-sm">
                             <p class="mb-0 fw-bold">TOORO RICHARD</p>
                             <small class="text-muted">Founder & CEO</small>
@@ -230,33 +239,33 @@
             <div class="row g-4">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card team-card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Alejandro Morales" loading="lazy">
+                        <img src="images/ayera.jpg" class="card-img-top team-img" alt="Alejandro Morales" loading="lazy">
                         <div class="card-body text-center">
-                            <h3 class="h5 fw-bold mb-1">TOORO TICHARD</h3>
-                            <p class="text-success mb-3">Founder & CEO</p>
-                            <p class="small">A seasoned tourism expert and passionate storyteller, Tooro Richard combines deep cultural insight with a visionary approach to hospitality, guiding orucuba’s sustainable growth </p>
+                            <h3 class="h5 fw-bold mb-1">AYERA BRIAN</h3>
+                            <p class="text-success mb-3">SUPERVISER</p>
+                            <p class="small">Formely working with Chobe safari lodges .comes along with indiginoues knowledge from Nothern Uganda to join the orucuba family</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card team-card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Elena Rodriguez" loading="lazy">
+                        <img src="images/chef.jpg" class="card-img-top team-img" alt="Elena Rodriguez" loading="lazy">
                         <div class="card-body text-center">
-                            <h3 class="h5 fw-bold mb-1">Elena Rodriguez</h3>
-                            <p class="text-success mb-3">Executive Chef</p>
-                            <p class="small">With 15 years of international experience, Chef Elena creates culinary magic while supporting local producers.</p>
+                            <h3 class="h5 fw-bold mb-1">ESTHER MUSIIMENTA ABWOOLI</h3>
+                            <p class="text-success mb-3">CHEF</p>
+                            <p class="small">Grewup with the grandmother whom she learnt alot of cooking of local Tooro cuisine.she is experienced and exposed nationaly and internationally</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card team-card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img-top team-img" alt="Carlos Mendez" loading="lazy">
+                        <img src="images/dauda.jpg" class="card-img-top team-img" alt="Carlos Mendez" loading="lazy">
                         <div class="card-body text-center">
-                            <h3 class="h5 fw-bold mb-1">Carlos Mendez</h3>
-                            <p class="text-success mb-3">Head of Sustainability</p>
-                            <p class="small">A local conservation expert, Carlos ensures every aspect of our operations meets rigorous environmental standards.</p>
+                            <h3 class="h5 fw-bold mb-1">HADIIJHA DAUDA</h3>
+                            <p class="text-success mb-3">Receptionist , barista and also a beautician with many years of experience and exposure</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -282,7 +291,7 @@
                             </div>
                             <div>
                                 <h3 class="h4 fw-bold mb-3">Environmental Stewardship</h3>
-                                <p class="mb-0">We go beyond sustainability to actively regenerate the ecosystems we inhabit, using renewable energy, water conservation systems, and habitat restoration projects.</p>
+                                <p class="mb-0">.orucuba is a model for growing organic crops such as pineapples,vegetables and promoting original seeds</p>
                             </div>
                         </div>
                     </div>
@@ -296,7 +305,7 @@
                             </div>
                             <div>
                                 <h3 class="h4 fw-bold mb-3">Community Partnership</h3>
-                                <p class="mb-0">85% of our staff are from local communities, and we invest 10% of profits into education and infrastructure projects in surrounding villages.</p>
+                                <p class="mb-0">100% of our staff are native to our area and have authentic information to our guests.</p>
                             </div>
                         </div>
                     </div>
@@ -323,7 +332,7 @@
                                 <i class="fas fa-gem fa-lg"></i>
                             </div>
                             <div>
-                                <h3 class="h4 fw-bold mb-3">Thoughtful Luxury</h3>
+                                <h3 class="h4 fw-bold mb-3">Thoughtful comfort</h3>
                                 <p class="mb-0">Every indulgence is carefully considered - organic linens, artisan-crafted furnishings, and amenities that delight while minimizing environmental impact.</p>
                             </div>
                         </div>
@@ -352,7 +361,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="h4 fw-bold">100% Renewable Energy</h3>
+                                    <h3 class="h4 fw-bold">100% solar energy</h3>
                                     <p>Solar panels and micro-hydro systems power our entire gardens with clean energy.</p>
                                 </div>
                             </div>
@@ -429,7 +438,7 @@
                         <span class="fw-bold">orucuba</span>
                         <span class="ms-1">gardens</span>
                     </a>
-                    <p class="mb-4">Where luxury meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
+                    <p class="mb-4">Where meets nature's tranquility. Experience the perfect blend of comfort and wilderness.</p>
                     <div class="social-icons mb-4 mb-lg-0">
                         <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
